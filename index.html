@@ -24,44 +24,71 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trust IP</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-TI6S3Dc9r0x7z3u6hzjJq6pX7o3j0+2YF5p4F8dD0X0q4u8F0c1eRovp3j7Yp8y5hWw6m+bBif3TmM3IFw3WQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+<style>
+  #socials {
+  background-color: #e0f7fa;
+  padding: 20px;
+  text-align: center;
+}
+
+#socials a {
+  margin: 0 15px;
+  font-size: 24px;
+  color: #00796b;
+  transition: color 0.3s;
+}
+
+#socials a:hover {
+  color: #004d40;
+}
+
+  .fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
 </head>
 <body class="bg-white text-navy-900">
 
-<!-- Navbar -->
 <nav class="bg-navy-900 text-white sticky top-0 z-50 shadow-md">
   <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
     <div class="flex items-center space-x-3">
-      <!-- Logo holder -->
-      <img src="https://i.postimg.cc/tTgq0tj5/logo-jpg.jpg" alt="Trust IP Logo" class="w-12 h-12 rounded-full object-cover">
-      <div class="text-2xl font-bold text-blue-400">Trust IP</div>
+      <img src="https://i.postimg.cc/TwL9V22G/logo-jpg.jpg" alt="Trust IP Logo" class="fade-up w-12 h-12 rounded-full object-cover">
+      <div class="text-2xl font-bold text-blue-400 fade-up ">Trust IP</div>
     </div>
-    <div class="space-x-6 hidden md:flex">
-      <a href="#about" class="hover:text-blue-300 transition">About</a>
-      <a href="#services" class="hover:text-blue-300 transition">Services</a>
-      <a href="#team" class="hover:text-blue-300 transition">Team</a>
-      <a href="#socials" class="hover:text-blue-300 transition">Socials</a>
-      <a href="#contact" class="hover:text-blue-300 transition">Contact</a>
+    <div class="fade-up space-x-6 hidden md:flex">
+      <a href="#about" class="color: text-blue-600 hover:text-blue-700 transition">About</a>
+      <a href="#services" class="color: text-blue-600 hover:text-blue-700 transition">Services</a>
+      <a href="#team" class="color: text-blue-600 hover:text-blue-700 transition">Team</a>
+      <a href="#socials" class="color: text-blue-600 hover:text-blue-700 transition">Socials</a>
+      <a href="#contact" class="color: text-blue-600 hover:text-blue-700 transition">Contact</a>
     </div>
   </div>
 </nav>
 
-<!-- Hero Carousel -->
 <section class="relative">
   <div class="tns-carousel">
-    <div class="relative h-[80vh] flex items-center justify-center text-center">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20">
+    <div class="relative h-[80vh] flex items-center justify-center text-center fade-up">
+      <img src="https://i.postimg.cc/prdqY3Rv/coolbackgrounds-fractalize-clear-lagoon.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-60">
       <div class="z-10 max-w-xl px-4">
         <h1 class="text-4xl md:text-5xl font-bold mb-4 text-blue-600">Protect Your Ideas</h1>
         <p class="text-lg md:text-xl mb-6 text-navy-800">Trust IP helps businesses secure patents, trademarks, and copyrights with precision and care.</p>
         <a href="#contact" class="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">Get Started</a>
       </div>
     </div>
-    <div class="relative h-[80vh] flex items-center justify-center text-center">
-      <img src="https://images.unsplash.com/photo-1581091870621-2d4c0c8f9f8b?auto=format&fit=crop&w=1400&q=80" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20">
+    <div class="relative h-[80vh] flex items-center justify-center text-center fade-up">
+      <img src="https://i.postimg.cc/Bb110CCD/Pngtree-modern-simple-elegant-dark-blue-1454711-3fad01c4-703b-44d7-8884-2e5628d2cdd0.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20">
       <div class="z-10 max-w-xl px-4">
         <h1 class="text-4xl md:text-5xl font-bold mb-4 text-blue-600">Your IP, Our Priority</h1>
         <p class="text-lg md:text-xl mb-6 text-navy-800">We combine legal expertise with strategy to protect your intellectual property globally.</p>
@@ -71,12 +98,11 @@
   </div>
 </section>
 
-<!-- About -->
-<section id="about" class="py-20 bg-white">
+<section id="about" class="fade-up py-20 bg-white">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-12 text-blue-600">About Us</h2>
     <div class="md:flex md:items-center md:gap-12">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=300&q=80" alt="Team" class="rounded-full w-64 mx-auto md:mx-0 shadow-lg">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=300&q=80" alt="Team" class="rounded-xl w-80 md:w-96 mx-auto md:mx-0 shadow-lg">
       <div class="mt-8 md:mt-0">
         <p class="text-navy-800 text-lg leading-relaxed">Trust IP is a premier intellectual property consultancy. Our team guides creators, businesses, and innovators through patents, trademarks, copyrights, and strategic IP protection. We deliver tailored solutions to ensure your ideas are legally safe and maximized for growth.</p>
       </div>
@@ -84,8 +110,7 @@
   </div>
 </section>
 
-<!-- Services -->
-<section id="services" class="py-20 bg-blue-50">
+<section id="services" class="fade-up py-20 bg-blue-50">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-12 text-blue-600">Our Services</h2>
     <div class="grid md:grid-cols-3 gap-8">
@@ -108,22 +133,24 @@
   </div>
 </section>
 
-<!-- Team -->
-<section id="team" class="py-20 bg-white">
+<section id="team" 
+  class="fade-up py-20 bg-cover bg-center bg-no-repeat" 
+  style="background-image: url('https://static.vecteezy.com/system/resources/previews/003/557/259/non_2x/abstract-fluid-background-with-blue-color-vector.jpg');">
+
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-12 text-blue-600">Our Team</h2>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-blue-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition text-center">
+      <div class="bg-white/80 p-6 rounded-xl shadow-lg hover:shadow-2xl transition text-center">
         <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=300&q=80" alt="John Doe" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
         <h3 class="text-xl font-semibold text-navy-900">John Doe</h3>
         <p class="text-blue-600 font-medium">Lead IP Consultant</p>
       </div>
-      <div class="bg-blue-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition text-center">
+      <div class="bg-white/80 p-6 rounded-xl shadow-lg hover:shadow-2xl transition text-center">
         <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=300&q=80" alt="Jane Smith" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
         <h3 class="text-xl font-semibold text-navy-900">Jane Smith</h3>
         <p class="text-blue-600 font-medium">Patent Analyst</p>
       </div>
-      <div class="bg-blue-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition text-center">
+      <div class="bg-white/80 p-6 rounded-xl shadow-lg hover:shadow-2xl transition text-center">
         <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=300&q=80" alt="Ali Hassan" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
         <h3 class="text-xl font-semibold text-navy-900">Ali Hassan</h3>
         <p class="text-blue-600 font-medium">Copyright Specialist</p>
@@ -132,26 +159,34 @@
   </div>
 </section>
 
-<!-- Socials -->
-<section id="socials" class="py-20 px-6 bg-white">
-  <div class="container mx-auto section-container p-8 md:p-12 max-w-4xl">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600">Connect With Us</h2>
-    <div class="flex justify-center flex-wrap gap-6">
-      <a href="#" class="social-icon w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-2xl text-navy-900 hover:text-blue-400 transition"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="social-icon w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-2xl text-navy-900 hover:text-blue-400 transition"><i class="fab fa-tiktok"></i></a>
-      <a href="#" class="social-icon w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-2xl text-navy-900 hover:text-blue-400 transition"><i class="fab fa-discord"></i></a>
-      <a href="#" class="social-icon w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-2xl text-navy-900 hover:text-blue-400 transition"><i class="fab fa-whatsapp"></i></a>
-      <a href="#" class="social-icon w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-2xl text-navy-900 hover:text-blue-400 transition"><i class="fas fa-envelope"></i></a>
-      <a href="#" class="social-icon w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-2xl text-navy-900 hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
-    </div>
+
+
+<section id="socials" class="fade-up bg-white py-12">
+  <h2 class="text-3xl font-bold text-center mb-12 text-blue-400">Connect With Us</h2>
+
+  <div class="max-w-md mx-auto flex justify-center space-x-6">
+    <a href="#" aria-label="Instagram" class="text-navy-900 hover:text-blue-400 transition-all text-2xl">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="#" aria-label="TikTok" class="text-navy-900 hover:text-blue-400 transition-all text-2xl">
+      <i class="fa-brands fa-tiktok"></i>
+    </a>
+    <a href="#" aria-label="Discord" class="text-navy-900 hover:text-blue-400 transition-all text-2xl">
+      <i class="fa-brands fa-discord"></i>
+    </a>
+    <a href="mailto:abedghannoum9@gmail.com" aria-label="Email" class="text-navy-900 hover:text-blue-400 transition-all text-2xl">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="https://github.com/lonemanwebs" aria-label="GitHub" class="text-navy-900 hover:text-blue-400 transition-all text-2xl">
+      <i class="fa-brands fa-github"></i>
+    </a>
   </div>
 </section>
 
-<!-- Footer -->
-<footer id="contact" class="bg-navy-900 text-white py-12 text-center">
+<footer id="contact" class="fade-up bg-navy-900 text-white py-12 text-center">
   <div class="max-w-6xl mx-auto px-4">
     <div class="mb-4 flex justify-center gap-4 items-center">
-      <img src="https://i.postimg.cc/nh8hsD4F/logobig-jpg.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+      <img src="https://i.postimg.cc/gchsr0BH/logobig-jpg.jpg" alt="Logo" class="w-10 h-10 rounded-full">
       <span class="text-blue-400 font-semibold text-xl">Trust IP</span>
     </div>
     <p>Location: Beirut, Lebanon</p>
@@ -174,6 +209,31 @@
     autoplayTimeout: 5000,
     mouseDrag: true,
   });
+
+ const faders = document.querySelectorAll('.fade-up');
+console.error("Error: Unexpected token at line 42"); 
+console.warn("Warning: Something weird happened"); 
+console.log("%cCritical failure in module XYZ", "color:red;font-weight:bold;");
+setInterval(() => {
+  console.error("Module failed to load: error_" + Math.floor(Math.random()*100));
+}, 5000);
+
+function checkFade() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  faders.forEach(fader => {
+    if (fader.getBoundingClientRect().top < triggerBottom) {
+      fader.classList.add('show');
+
+      fader.querySelectorAll('*').forEach(child => child.classList.add('show'));
+    }
+  });
+}
+
+window.addEventListener('scroll', checkFade);
+window.addEventListener('load', checkFade);
+
+
 </script>
 </body>
 </html>
