@@ -1,0 +1,347 @@
+<html lang="en"><head><script>
+  /*
+========================================================
+  Project: LoneManWebs / TrustIP
+  Author: Abdelwahab Ghannoum
+  Year: 2025
+========================================================
+
+  Hi there! 👋
+
+  This code is created and maintained by Abdelwahab Ghannoum.
+  If you’d like to share, modify, or use it for other projects,
+  kindly ask for permission first on +961 81 868 877. Thanks for respecting the work! ❤️
+
+========================================================
+*/
+
+</script>
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trust IP</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+<style>
+  #socials {
+  background-color: #e0f7fa;
+  padding: 20px;
+  text-align: center;
+}
+
+#socials a {
+  margin: 0 15px;
+  font-size: 24px;
+  color: #00796b;
+  transition: color 0.3s;
+}
+
+#socials a:hover {
+  color: #004d40;
+}
+
+  .fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#about {
+  position: relative;
+  background: rgb(87, 144, 235);
+  clip-path: polygon(
+    0 8%,     /* smaller dip on top-left */
+    100% 0,   /* top-right flat */
+    100% 92%, /* bottom-right closer to bottom */
+    0 100%    /* bottom-left flat */
+  );
+}
+
+footer {
+position: relative; 
+  clip-path: polygon(
+    0 15%,   /* point A: top-left corner moved 15% down */
+    100% 0,  /* point B: top-right corner stays at very top */
+    100% 100%, /* point C: bottom-right stays normal */
+    0 100%   /* point D: bottom-left stays normal */
+  )
+}
+#socials {
+  position: relative;
+  background: #69b4ff; /* example background */
+ clip-path: polygon(
+    0 90%,    /* bottom-left slightly up (more drop = smaller % like 85%) */
+    100% 70%, /* bottom-right bigger drop (70% = deeper) */
+    100% 0,   /* top-right */
+    0 0       /* top-left */
+  );
+}
+
+
+details {
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+</style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-32{height:8rem}.h-96{height:24rem}.h-\[70vh\]{height:70vh}.h-full{height:100%}.w-10{width:2.5rem}.w-12{width:3rem}.w-32{width:8rem}.w-80{width:20rem}.w-full{width:100%}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border-0{border-width:0px}.bg-blue-200{--tw-bg-opacity:1;background-color:rgb(191 219 254 / var(--tw-bg-opacity, 1))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-cover{background-size:cover}.bg-center{background-position:center}.bg-no-repeat{background-repeat:no-repeat}.object-cover{object-fit:cover}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.opacity-60{opacity:0.6}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:text-blue-400:hover{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.hover\:shadow-2xl:hover{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}@media (min-width: 768px){.md\:mx-0{margin-left:0px;margin-right:0px}.md\:mt-0{margin-top:0px}.md\:flex{display:flex}.md\:w-48{width:12rem}.md\:w-96{width:24rem}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}.md\:gap-12{gap:3rem}.md\:text-left{text-align:left}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}</style><style></style></head>
+<body class="bg-blue-200 text-navy-900">
+
+<nav class="bg-navy-900 text-white sticky top-0 z-50 shadow-md">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center space-x-3">
+      <img src="https://i.postimg.cc/TwL9V22G/logo-jpg.jpg" alt="Trust IP Logo" class="fade-up w-12 h-12 rounded-full object-cover show">
+      <div class="text-2xl font-bold text-blue-400 fade-up show">Trust IP</div>
+    </div>
+    <div class="fade-up space-x-6 hidden md:flex show">
+      <a href="#about" class="color: text-blue-600 hover:text-blue-700 transition show">About</a>
+      <a href="#services" class="color: text-blue-600 hover:text-blue-700 transition show">Services</a>
+      <a href="#team" class="color: text-blue-600 hover:text-blue-700 transition show">Team</a>
+      <a href="#socials" class="color: text-blue-600 hover:text-blue-700 transition show">Socials</a>
+      <a href="#contact" class="color: text-blue-600 hover:text-blue-700 transition show">Contact</a>
+    </div>
+  </div>
+</nav>
+<section class="relative h-[80vh] flex flex-col items-center justify-center text-center bg-white">
+  <!-- Logo -->
+  <img src="https://i.postimg.cc/TwL9V22G/logo-jpg.jpg" alt="Trust IP Logo" class="w-32 md:w-40 mb-6">
+
+  <!-- Text -->
+  <div class="z-10 max-w-xl px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-blue-600">Protect Your Ideas</h1>
+    <p class="text-lg md:text-xl mb-6 text-navy-800">Trust IP helps businesses secure patents...</p>
+    <a href="#contact" class="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+      Get Started
+    </a>
+  </div>
+</section>
+<br>
+<section id="about" class="py-20 bg-blue-500">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-600">About Us</h2>
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" 
+     alt="Team" 
+     class="rounded-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto shadow-lg h-auto object-cover">
+
+    <!-- Original paragraph stays visible -->
+    <p class="text-lg leading-relaxed text-navy-800 mb-8">
+      Trust Intellectual Property is a Lebanon-based firm built on more than 15 years of expertise in the field of intellectual property. We offer comprehensive services covering trademarks, patents, copyrights, industrial designs, and related IP matters, both in Lebanon and abroad. Our mission is to protect and add value to your intellectual assets by combining deep experience with professionalism, efficiency, and trust. Whether you are an individual entrepreneur or a multinational company, we stand as your reliable partner in safeguarding creativity and innovation.
+    </p>
+    
+    <!-- FAQ section -->
+    <details class="bg-white/20 p-4 rounded-lg shadow-md">
+      <summary class="font-semibold cursor-pointer">Trademarks</summary>
+      <ul class="mt-2 list-disc list-inside text-navy-800">
+        <li>What services does Trust IP offer?</li>
+        <li>How can I contact Trust IP for consultation?</li>
+        <li>Do you provide international IP protection?</li>
+      </ul>
+    </details>
+    <details class="bg-white/20 p-4 rounded-lg shadow-md">
+      <summary class="font-semibold cursor-pointer">Patents</summary>
+      <ul class="mt-2 list-disc list-inside text-navy-800">
+        <li>What services does Trust IP offer?</li>
+        <li>How can I contact Trust IP for consultation?</li>
+        <li>Do you provide international IP protection?</li>
+      </ul>
+    </details>
+    <details class="bg-white/20 p-4 rounded-lg shadow-md">
+      <summary class="font-semibold cursor-pointer">Designs</summary>
+      <ul class="mt-2 list-disc list-inside text-navy-800">
+        <li>What services does Trust IP offer?</li>
+        <li>How can I contact Trust IP for consultation?</li>
+        <li>Do you provide international IP protection?</li>
+      </ul>
+    </details>
+    <details class="bg-white/20 p-4 rounded-lg shadow-md">
+      <summary class="font-semibold cursor-pointer">Copyrights</summary>
+      <ul class="mt-2 list-disc list-inside text-navy-800">
+        <li>What services does Trust IP offer?</li>
+        <li>How can I contact Trust IP for consultation?</li>
+        <li>Do you provide international IP protection?</li>
+      </ul>
+    </details>
+    <details class="bg-white/20 p-4 rounded-lg shadow-md">
+      <summary class="font-semibold cursor-pointer">Domain Names</summary>
+      <ul class="mt-2 list-disc list-inside text-navy-800">
+        <li>What services does Trust IP offer?</li>
+        <li>How can I contact Trust IP for consultation?</li>
+        <li>Do you provide international IP protection?</li>
+      </ul>
+    </details>
+  </div>
+  <BR>
+    <br>
+</section>
+
+
+<section id="services" class="fade-up py-20 show">
+  <div class="max-w-6xl mx-auto px-4 bg-blue-200 show">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-600 show">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-8 show">
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition show">
+        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4436a5?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" class="rounded-lg mb-4 show">
+        <h3 class="text-xl font-semibold mb-2 text-blue-600 show">Trademarks</h3>
+        <p class="text-navy-800 show">registration, renewal, enforcement</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition show">
+        <img src="https://images.unsplash.com/photo-1573497164783-2c32e0426a76?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" class="rounded-lg mb-4 show">
+        <h3 class="text-xl font-semibold mb-2 text-blue-600 show">Patents</h3>
+        <p class="text-navy-800 show">filing, protection, portfolio management</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition show">
+        <img src="https://images.unsplash.com/photo-1611920531982-2a1106de7ee6?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" class="rounded-lg mb-4 show">
+        <h3 class="text-xl font-semibold mb-2 text-blue-600 show">Copyrights</h3>
+        <p class="text-navy-800 show">Registration and Enforcement</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition show">
+        <img src="https://images.unsplash.com/photo-1611920531982-2a1106de7ee6?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" class="rounded-lg mb-4 show">
+        <h3 class="text-xl font-semibold mb-2 text-blue-600 show">Industrial Designs</h3>
+        <p class="text-navy-800 show">Protection and Management</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition show">
+        <img src="https://images.unsplash.com/photo-1611920531982-2a1106de7ee6?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" class="rounded-lg mb-4 show">
+        <h3 class="text-xl font-semibold mb-2 text-blue-600 show">IP Consulting</h3>
+        <p class="text-navy-800 show">Strategy, licensing, franchising</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition show">
+        <img src="https://images.unsplash.com/photo-1611920531982-2a1106de7ee6?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" class="rounded-lg mb-4 show">
+        <h3 class="text-xl font-semibold mb-2 text-blue-600 show">Enforcement</h3>
+        <p class="text-navy-800 show">monitoring, anti-counterfeit</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="fade-up py-20 bg-cover bg-center bg-no-repeat show" style="background-image: url('https://static.vecteezy.com/system/resources/previews/003/557/259/non_2x/abstract-fluid-background-with-blue-color-vector.jpg');">
+
+  <div class="max-w-6xl mx-auto px-4 show">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-600 show">Our Team</h2>
+    <div class="grid md:grid-cols-3 gap-8 show">
+      <div class="flex flex-col md:flex-row bg-white/80 p-6 rounded-xl shadow-lg hover:shadow-2xl transition gap-6 max-w-4xl mx-auto show">
+  <!-- Left: image + name + role -->
+  <div class="flex-shrink-0 text-center md:text-left md:w-48 show">
+    <img src="https://i.postimg.cc/9QnfnZzh/Whats-App-Image-2025-09-08-at-16-35-38-36f0d921.jpg" alt="Ghina Harb" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto md:mx-0 show">
+    <h3 class="text-xl font-semibold text-navy-900 show">Lina Kalash</h3>
+    <p class="text-blue-600 font-medium show">Lead IP Consultant</p>
+  </div>
+
+  <!-- Right: paragraph -->
+  <div class="flex-1 text-left show">
+    <p class="text-gray-700 show">
+      With over 17 years of leadership experience in Intellectual property field, Lina Kalash has developed strong expertise in trademarks, patents, and copyrights across carious jurisdictions. She is recognized for delivering strategic and reliable IP solutions, helping clients protect their rights and grow their businesses.
+  </p></div>
+</div>
+
+      <div class="flex bg-white/80 p-6 rounded-xl shadow-lg hover:shadow-2xl transition gap-6 show">
+  <!-- Left: image + name + role -->
+  <div class="flex flex-col md:flex-row bg-white/80 p-6 rounded-xl shadow-lg hover:shadow-2xl transition gap-6 max-w-4xl mx-auto show">
+  <!-- Left: image + name + role -->
+  <div class="flex-shrink-0 text-center md:text-left md:w-48 show">
+    <img src="https://i.postimg.cc/sX9sshf1/Whats-App-Image-2025-09-08-at-16-35-38-57027374.jpg" alt="Ghina Harb" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto md:mx-0 show">
+    <h3 class="text-xl font-semibold text-navy-900 show">Ghina Harb</h3>
+    <p class="text-blue-600 font-medium show">Patent Analyst</p>
+  </div>
+
+  <!-- Right: paragraph -->
+  <div class="flex-1 text-left show">
+    <p class="text-gray-700 show">
+      With nearly 12 years of experience in the Intellectual Property sector, Ghina Harb has built solid expertise in managing trademark portfolios, handling filings, renewals, and enforcement matters. She is known for her attention to detail and her commitment to providing efficient and client-focused support.
+  </p></div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+
+<section id="socials" class="fade-up bg-white py-12 relative h-[70vh] show">
+  <h2 class="text-3xl font-bold text-center mb-12 text-blue-600 show">Connect With Us</h2>
+
+  <div class="max-w-md mx-auto flex justify-center space-x-6 show">
+    <a href="#" aria-label="Instagram" class="text-navy-900 hover:text-blue-400 transition-all text-2xl show">
+      <i class="fa-brands fa-instagram show"></i>
+    </a>
+    <a href="#" aria-label="TikTok" class="text-navy-900 hover:text-blue-400 transition-all text-2xl show">
+      <i class="fa-brands fa-tiktok show"></i>
+    </a>
+    <a href="#" aria-label="Discord" class="text-navy-900 hover:text-blue-400 transition-all text-2xl show">
+      <i class="fa-brands fa-whatsapp show"></i>
+    </a>
+    <a href="mailto:abedghannoum9@gmail.com" aria-label="Email" class="text-navy-900 hover:text-blue-400 transition-all text-2xl show">
+      <i class="fa-solid fa-envelope show"></i>
+    </a>
+    <a href="https://github.com/lonemanwebs" aria-label="GitHub" class="text-navy-900 hover:text-blue-400 transition-all text-2xl show">
+      <i class="fa-brands fa-facebook show"></i>
+    </a>
+  </div>
+</section>
+<footer id="contact" class="fade-up bg-blue-200 text-white py-12 text-center show">
+  <div class="max-w-6xl mx-auto px-4 show">
+    <div class="mb-4 flex justify-center gap-4 items-center show">
+      <br class="show">
+      <br class="show">
+      <br class="show">
+      <img src="https://i.postimg.cc/gchsr0BH/logobig-jpg.jpg" alt="Logo" class="w-10 h-10 rounded-full show">
+      <span class="text-blue-400 font-semibold text-xl show">Trust IP</span>
+    </div>
+    <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg show">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2764.1857076636065!2d35.50289157570964!3d33.89356607321719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDUzJzM2LjgiTiAzNcKwMzAnMTkuNyJF!5e1!3m2!1sen!2slb!4v1757001116237!5m2!1sen!2slb" class="w-full h-full border-0 show" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+    <p class="mt-2 text-blue-400 show">Location: Lebanon , Beirut , Downtown , Mother Jilas street , markazia building , ground floor</p>
+    <p class="mt-2 show">Email: <a href="mailto:info@trustip.com" class="underline text-blue-400 show">info@trustip.com</a></p>
+    <p class="mt-2 show">Follow us: <a href="#" class="underline text-blue-400 show">LinkedIn</a> | <a href="#" class="underline text-blue-400 show">Twitter</a></p>
+    <p class="mt-4 show">© 2025 Trust IP</p>
+  </div>
+</footer>
+
+<script>
+  var slider = tns({
+    container: '.tns-carousel',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    controls: false,
+    nav: true,
+    autoplayButtonOutput: false,
+    speed: 700,
+    autoplayTimeout: 5000,
+    mouseDrag: true,
+  });
+  document.querySelectorAll("details").forEach((el) => {
+  el.addEventListener("toggle", () => {
+    let content = el.querySelector("div");
+    if (el.open) {
+      let start = 0;
+      let end = content.scrollHeight;
+      content.style.height = start + "px";
+      requestAnimationFrame(() => {
+        content.style.transition = "height 0.3s ease";
+        content.style.height = end + "px";
+      });
+    } else {
+      let start = content.scrollHeight;
+      let end = 0;
+      content.style.height = start + "px";
+      requestAnimationFrame(() => {
+        content.style.transition = "height 0.3s ease";
+        content.style.height = end + "px";
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>
